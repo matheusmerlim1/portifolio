@@ -4,6 +4,16 @@ body {
     margin: 0;
     line-height: 1.6;
 }
+ul {
+    list-style-type: none;
+}
+
+.imagem_perfil img {
+    width: 200px; /* Define o tamanho da imagem */
+    height: 200px; /* Define o tamanho da imagem */
+    border-radius: 50%; /* Aplica o corte circular */
+    object-fit: cover; /* Faz com que a imagem se ajuste corretamente ao tamanho */
+}
 
 /* Cabeçalho e navegação */
 header {
@@ -16,7 +26,7 @@ header {
 }
 
 nav ul {
-    list-style: none;
+    
     display: flex;
     justify-content: center;
     margin: 0;
@@ -54,29 +64,64 @@ section p {
     margin: 0 auto;
     font-size: 1.2em;
 }
+section ul{
+    text-align: left;
+}
 
 /* Projetos */
 .project-grid {
     display: flex;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fill, 1fr);
     gap: 20px;
     margin-top: 20px;
     overflow-x: auto;
 }
 
+.Idioma_Linguagem{
+    display: flex; /* Deixa os itens lado a lado */
+    justify-content: space-around; /* Espaçamento uniforme entre as colunas */
+    align-items: flex-start; /* Alinha ao topo */
+    gap: 20px; /* Espaço entre as colunas */
+    margin: 20px;
+}
+
+
+/* O card onde aparece os projetos*/
 .project-card {
     padding: 20px;
     border: 1px solid #ddd;
     border-radius: 10px;
     transition: transform 0.3s, box-shadow 0.3s;
+    transition: all 0.3s ease; /* Se você tiver alguma transição de expansão */
+    overflow-y: auto;
+    overflow-x: auto;
+    
 }
 
 .project-card:hover {
-    transform: scale(1.05);
+    transform: scale(1.1);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    height: auto; /* Garante que a altura se ajusta ao conteúdo */
+    
+}
+
+.project-card img{
+    max-width: 100%;
+    height: auto;
 }
 .sobre-min{
     display:flex;
+}
+
+/*secção de contato*/
+#contact div{
+    display:flex;
+    justify-content: center;
+    gap:20px;
+}
+.contato img{
+    width: 30px;
+    height: 30px;
 }
 
 /* Rodapé */
